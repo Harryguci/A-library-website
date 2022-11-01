@@ -1,0 +1,177 @@
+.menubar {
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    /* background-color: gray; */
+    justify-content: space-between;
+    padding: 20px 0 0 0;
+}
+.dark-screen {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-out;
+}
+.menubar .left-side {
+    display: flex;
+    margin: auto 0;
+    margin-left: 20px;
+}
+.menubar .left-side h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.menubar .right-side {
+    margin: auto 0;
+    margin-right: 20px;
+}
+
+.menubar .right-side button {
+    width: auto;
+    min-width: 50px;
+    padding: 10px 20px;
+    background: none;
+    font-size: 12px;
+    color: gray;
+    border: none;
+    cursor: pointer;
+}
+.menubar .right-side .active {
+    border: 1px gray solid;
+}
+
+.menubar .menu-more-option {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -50%;
+    width: 50%;
+    height: 100vh;
+    z-index: 4;
+    background-color: white;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-more-option #close-menu-more-option > span {
+    position: relative;
+    display: block;
+    /* top: 20px;
+    left: 10px; */
+    margin: 20px 0 0 10px;
+    font-size: 200%;
+}
+.menu-more-option .front-side {
+    position: relative;
+    top: 0;
+}
+.menu-more-option ul {
+    display: block;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+.menu-more-option ul li {
+    list-style-type: none;
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 0 0 0 20px;
+}
+.menu-more-option ul li:hover,
+.menu-more-option ul li:active {
+    background-color: whitesmoke;
+}
+.menu-more-option li span {
+    margin: auto 0;
+    color: gray;
+    font-size: 14px;
+}
+.menu-more-option .back-side {
+    display: flex;
+    position: absolute;
+    bottom: 60px;
+    justify-content: flex-start;
+}
+
+.menu-more-option .back-side ul li {
+    display: inline;
+}
+.menu-more-option .back-side ul li span {
+    font-size: 14px;
+}
+.menubar a {
+    text-decoration: none;
+    color: gray;
+    display: flex;
+}
+.menubar .menu-more-option .back-side a {
+    display: inline;
+}
+.menubar2 {
+    display: none
+}
+
+@media only screen and (min-width: 800px) {
+    .menubar {
+        display: none;
+    }
+    .menubar2 {
+        display: flex;
+        justify-content: space-between;
+        height: 70px;
+    }
+    .menubar2 .list-item {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .menubar2 .list-item a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: gray;
+        width: auto;
+        padding: 0 20px;
+        height: 100%;
+    }
+    .menubar2 .list-item a:hover {
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .menubar2 .first-logo-name {
+        margin-left: 20px;
+    }
+    .menubar2 .back-side {
+        display: flex;
+        margin: 0 20px 0 0;
+    }
+    .menubar2 a {
+        text-decoration: none;
+        color:gray;
+    }
+    .menubar2 .back-side .item {
+        margin: auto 0;
+        width: fit-content;
+        min-width: 100px;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .menubar2 .back-side .item.active {
+        border: 1px gray solid;
+    }
+    .menubar2 .back-side .item:not(:last-child) {
+        margin-right: 10px;
+    }
+}

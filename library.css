@@ -1,0 +1,225 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.container {
+    display: block;
+    width: 100%;
+    min-height: 500px;
+    /* background-color: white; */
+}
+
+.container .search-bar {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+}
+.container .search-bar form:first-child {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+}
+.container .search-bar input {
+    display: block;
+    width: 70%;
+    /* height: 40px; */
+    border: gray 1px solid;
+    border: none;
+    border-radius: 9999px;
+    padding: 15px 10px 15px 20px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    color: gray;   
+}
+.container .search-bar .search-button {
+    margin: 0 0 0 10px;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+}
+.container .search-bar .search-button:hover,
+.container .search-bar .search-button:active,
+.container .search-bar .search-button:focus {
+    background-color: rgb(0, 170, 0);
+    color: white;
+}
+
+.container .search-bar .sample-options {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 10px 0 0 0;
+    position: relative;
+}
+
+.container .search-bar .sample-options span {
+    font-size: 12px;
+    color: gray;
+}
+.container .search-bar .sample-options span:not(:last-child) {
+    margin: 0 10px 0 0;
+}
+.space-10 {
+    width: 10px;
+}
+
+.main-library {
+    width: 100%;
+    height: auto;
+}
+.main-library .type-book-option {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px 0 20px 0;
+}
+.main-library .type-book-option .item {
+    display: block;
+    padding: 10px 20px;
+    color: gray;
+    margin-top: 10px;
+    border: 1px gray solid;
+}
+.main-library .type-book-option .item:hover,
+.main-library .type-book-option .item:active,
+.main-library .type-book-option .item:focus {
+    background-color: rgb(0, 170, 0);
+    color: white;
+}
+.main-library .type-book-option .item:not(:last-child) {
+    margin-right: 10px;
+}
+.main-library .type-book-option .item:not(:first-line) {
+    margin-top: 10px;
+}
+.collection-book-header {
+    margin: 70px 0 0 0px;
+    padding: 20px 20px 20px 30%;
+    color: white;
+    background-color: green;
+    width: fit-content;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+.collection-book-header h4 {
+    margin: 0;
+}
+.collection-book {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0 0 0;
+}
+
+.collection-book .item {
+    display: block;
+    height: 300px;
+    background-color: white;
+    border-radius: 10px;
+}
+.collection-book .item:hover,
+.collection-book .item:active {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.collection-book .item .image-frame {
+    width: 100%;
+    height: 70%;
+    padding-bottom: 0;
+    overflow: hidden;
+}
+.collection-book .item .image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.collection-book .item:hover .image-frame img {
+    transform: scale(120%);
+}
+.collection-book .item:nth-child(even) {
+    margin-left: 5px;
+}
+.collection-book .item:not(:nth-child(1):nth-child(2)) {
+    margin-top: 15px;
+}
+.col-2 {
+    width: calc(50% - 5px);
+}
+.collection-book .item .describe {
+    text-align: center;
+    margin: 20px 0 0 0;
+}
+.collection-book .item .describe h4 {
+    margin: 0;
+}
+.collection-book .item .describe span {
+    color: gray;
+    font-size: 14px;
+}
+.collection-book .item .rate {
+    display: flex;
+    justify-content: center;
+}
+.collection-book .item .rate span {
+    margin: 10px 0 0 0;
+    color: orangered;
+    font-size: 100%;
+}
+.collection-book .item .rate
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+.pagination-collection-book {
+    position: relative;
+    display: flex;
+    width: fit-content;
+    top: 35px;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 0;
+    max-width: 1000px;
+}
+.pagination-collection-book a {
+    text-decoration: none;
+    color: gray;
+    display: flex;
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}
+.pagination-collection-book a.active {
+    background-color: green;
+    color: white;
+}
+.pagination-collection-book a:not(:last-child) {
+    margin-right: 10px;
+}
+
+@media only screen and (min-width: 600px) {
+    .col-2 {
+        width: 24%;
+    }
+    .collection-book {
+        margin: 0 auto;
+        justify-content: center;
+    }
+    .collection-book .item {
+        margin: 0 0 0 5px;
+        max-width: 240px;
+    }
+}
