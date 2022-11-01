@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <!-- Linked CSS files -->
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="menubar.css">
+    <link rel="stylesheet" href="footer.css">
+    <!-- Linked JS files -->
+    <script src="myScript.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="menubar">
+        <div class="left-side">
+            <button type="button" id="open-menu-more-option" onclick="openMoreOption()">
+                <span class="material-symbols-outlined">
+                    menu
+                </span>
+            </button>
+            <div class="menu-more-option">
+                <button type="button" id="close-menu-more-option" onclick="closeMoreOption()">
+                    <span class="material-symbols-outlined">
+                        close
+                    </span>
+                </button>
+                <div class="front-side">
+                    <ul>
+                        <li>
+                            <a href="home.html">
+                                <span>Introduction</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="library.html">
+                                <span>Book</span>
+                            </a>
+                        </li>
+                        <li><span>Photo</span></li>
+                        <li>
+                            <span>Contact</span>
+                        </li>
+                        <li>
+                            <span>About Us</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="back-side">
+                    <ul>
+                        <li>
+                            <a href="index.html">
+                                <span>Login</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                <span>Sign Up</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <h2>Library</h2>
+        </div>
+        <div class="right-side">
+            <form>
+                <button type="button" class="right-side-but">
+                    <a href="index.html"><span>Login</span></a>
+                </button>
+                <button type="button" class="right-side-but">
+                    <a href="index.html">
+                        <span>Sign up</span>
+                    </a>
+                </button>
+            </form>
+        </div>
+    </div>
+    <div class="menubar2">
+        <h2 class="first-logo-name">Library</h2>
+        <div class="list-item">
+            <div class="item">
+                <a href="home.html">
+                    <span>Introduction</span>
+                </a>
+            </div>
+            <div class="item">
+                <a href="library.html">
+                    <span>Book</span>
+                </a>
+            </div>
+            <div class="item">
+                <a href="#">
+                    <span>Photo</span>
+                </a>
+            </div>
+            <div class="item">
+                <a href="#">
+                    <span>Contact</span>
+                </a>
+            </div>
+            <div class="item">
+                <a href="#">
+                    <span>About us</span>
+                </a>
+            </div>
+        </div>
+        <div class="back-side">
+            <div class="item">
+                <a href="index.html">
+                    <span>Login</span>
+                </a>
+            </div>
+            <div class="item">
+                <a href="index.html">
+                    <span>Sign up</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="left-side">
+            <!-- Choose Option -->
+            <div>
+                <button type="button" class="typePersonButton active" onclick="applyActiveType(0)">
+                    <span>User</span>
+                </button>
+                <button type="button" class="typePersonButton" onclick="applyActiveType(1)">
+                    <span>Admin</span>
+                </button>
+            </div>
+            <!-- frame-login or frame-sign -->
+            <div class="frame-login user active">
+                <h3>Login</h3>
+                <span class="typeLoginSpan">User</span>
+                <form>
+                    <input type="text" placeholder="Email or Phone number">
+                    <input type="password" placeholder="Password">
+                </form>
+                <form>
+                    <input type="checkbox" value="1" id="accepted-checkbox">
+                    <label for="accepted">
+                        <span id="label-accepted-checkbox">Save the account name and the password</span>
+                    </label>
+                </form>
+                <button type="button" class="submit-button">
+                    <span>Submit</span>
+                </button>
+            </div>
+        </div>
+        <div class="right-side"></div>
+    </div>
+    <div class="footer">
+        <div class="item">
+            <h4>About us</h4>
+            <ul>
+                <li>
+                   <a href="home.html">
+                    <span>Home</span>
+                   </a>
+                </li>
+                <li>History</li>
+                <li>Reward</li>
+                <li>Photo</li>
+            </ul>
+        </div>
+        <div class="item">
+            <h4>Product</h4>
+            <ul>
+                <li>Science Books</li>
+                <li>Child Books</li>
+                <li>Electric Books</li>
+            </ul>
+        </div>
+        <div class="item">
+            <h4>Contact</h4>
+            <ul>
+                <li>Facebook</li>
+                <li>Email</li>
+                <li>Hotline</li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright-container">
+        <span class="copyrightSpan">Copyright by Harryguci</span>
+        <span class="copyrightSpan"><br>18 / 08 / 2022</span>
+    </div>
+</body>
+
+</html>

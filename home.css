@@ -1,0 +1,250 @@
+* {
+  box-sizing: border-box;
+  transition: all 0.2s ease-out;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: whitesmoke;
+}
+
+body {
+  margin: 0;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+button:hover {
+  filter: brightness(120%) contrast(80%);
+}
+
+.menubar a {
+  text-decoration: none;
+  font-size: 14px;
+  color: gray;
+}
+
+.menubar .right-side .right-side-but {
+  padding: 10px;
+}
+
+.round-corner {
+  border-radius: 5px;
+}
+
+.shadow {
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+}
+.container {
+  display: block;
+  position: relative;
+  width: 100%;
+  min-height: 70%;
+  height: auto;
+  margin: 70px 0 0 0;
+}
+.container .box {
+  display: block;
+  border: 1px solid gray;
+  padding: 10px 20px;
+  width: fit-content;
+  margin: 0 0 40px 20px;
+}
+.container .box a {
+  text-decoration: none;
+}
+.container .box:first-child {
+  margin: 0 0 20px 20px;
+}
+
+.container .box:hover {
+  background-color: green;
+  border: 1px solid green;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+.container .box:hover h4 {
+  color: white;
+}
+.container .box h4 {
+  margin: 0;
+  color: gray;
+}
+
+.container .collection {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: gray;
+}
+.collection .button-container {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.collection .button-container button {
+  display: block;
+  height: 100%;
+  color: white;
+}
+.collection button span {
+  font-size: 250%;
+}
+.collection .image-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.collection .slider {
+  display: block;
+  width: 100vw;
+  height: 100%;
+  position: relative;
+  transition: 0.4s all ease-out;
+}
+.collection img {
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+}
+.collection .dotCounter {
+  display: flex;
+  margin: 10px 0 0 0;
+  justify-content: center;
+}
+.dot {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: 1px solid gray;
+  border-radius: 50%;
+  transition: all 0.3s ease-out;
+}
+.dot:not(:last-child) {
+  margin: 0 10px 0 0;
+}
+
+.dotCounter .active {
+  background-color: green;
+}
+
+.introduction-container {
+  margin: 100px 0 0 0;
+  width: 100%;
+  min-height: 200px;
+  height: auto;
+}
+.news-container {
+  display: block;
+  margin: 50px 0 0 0;
+  width: 100%;
+  min-height: 200px;
+  height: auto;
+}
+
+.heading:first-child {
+  margin: 0 0 10px 40px;
+}
+.section-content {
+  padding: 20px 20px 20px 40px;
+  background-color: white;
+  font-size: 14px;
+  color: gray;
+  height: auto;
+}
+.section-content span {
+  line-height: 25px;
+  text-align: justify;
+}
+.news-container .item {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.news-container .item:not(:last-child) {
+  margin: 0 0 50px 0;
+}
+.news-container .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.news-container .item:hover img {
+  filter: brightness(120%) contrast(70%);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+}
+.news-container .item span {
+  display: block;
+}
+
+.reward-container {
+  display: block;
+  margin: 50px 0 0 0;
+  width: auto;
+  position: relative;
+}
+.reward-container .section-content {
+  display: flex;
+  width: auto;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+}
+.reward-container .section-content .item {
+  width: 70vw;
+  display: block;
+}
+.reward-container .section-content .item:not(:last-child) {
+  margin: 0 20px 0 0;
+}
+.reward-container .section-content .item img {
+  width: 70vw;
+  height: 200px;
+  object-fit: cover;
+}
+
+.reward-container button {
+  position: absolute;
+  top: 50%;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.reward-container .reward-right-button {
+  right: 0;
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+  .reward-container .section-content .item img {
+    height: 450px;
+    width: 50vw;
+  }
+  .reward-container .section-content::-webkit-scrollbar {
+    background-color: white;
+  }
+  .reward-container .section-content::-webkit-scrollbar-thumb {
+    background-color: rgb(231, 231, 231);
+  }
+  .container .collection {
+    height: 600px;
+  }
+  .collection img {
+    width: 50vw;
+  }
+}
